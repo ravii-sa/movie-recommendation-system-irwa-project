@@ -122,7 +122,6 @@ def recommend(movies=None, genres=[], hide_rated=True, n=20, page=0):
 
     #filter by genres provided
     if len(genres) > 0:
-        st.write("genres ran")
         movies = get_movies_with_all_genres(genres)
         movie_similarities = movie_similarities[movie_similarities['movieId'].isin(movies)]
         movie_similarities.reset_index()
